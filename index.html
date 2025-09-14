@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated To-Do List App</title>
+    <!-- Link to Tailwind CSS and custom stylesheet -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="container">
+        <h1 class="text-3xl font-bold mb-2 text-center text-blue-900">
+            To-Do List App 📝
+        </h1>
+        <p class="text-center text-gray-600 mb-6">
+            Organize your day with this simple and elegant to-do list.
+        </p>
+        <hr class="mb-6 border-t-2 border-gray-300" />
+        <div class="row flex items-center bg-gray-200 rounded-full px-5 py-2 mb-6">
+            <input type="text" id="input-box" placeholder="Add a new task..." class="bg-transparent border-none outline-none flex-1 text-base p-2">
+            <button class="add-btn" onclick="addTask()">
+                Add
+            </button>
+        </div>
+        <ul id="list-container" class="mt-4"></ul>
+        <div class="flex justify-between items-center mt-6 pt-4 border-t">
+            <div class="flex gap-2">
+                <button class="filter-btn active" data-filter="all" onclick="filterTasks('all')">All</button>
+                <button class="filter-btn" data-filter="active" onclick="filterTasks('active')">Active</button>
+                <button class="filter-btn" data-filter="completed" onclick="filterTasks('completed')">Completed</button>
+            </div>
+            <button class="add-btn !bg-red-500 !text-sm !p-2" onclick="clearAllTasks()">Clear All</button>
+        </div>
+    </div>
+
+    <!-- Link to custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
